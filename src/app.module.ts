@@ -1,8 +1,8 @@
 import { Module } from "@nestjs/common";
 import { UsersModule } from "./users/users.module";
 import { TypeOrmModule } from "@nestjs/typeorm";
-import { User } from "./users/user.entity";
-import { SettingsModule } from './settings/settings.module';
+import { User } from "./users/entities/user.entity";
+import { SettingsModule } from "./settings/settings.module";
 import { Settings } from "./settings/settings.entity";
 
 @Module({
@@ -16,7 +16,7 @@ import { Settings } from "./settings/settings.entity";
       username: "postgres",
       password: "825273",
       database: "quranDailyDevDB",
-      entities: [User, Settings], 
+      entities: [User, Settings],
       synchronize: true,
     }),
     UsersModule,
