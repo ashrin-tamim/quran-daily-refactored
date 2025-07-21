@@ -4,7 +4,24 @@ POST http://localhost:3000/auth/signup
 Content-Type: application/json
 
 {
-    "email": "shakil.tamim@gmail.com",
+    "email": "robin.tamim@gmail.com",
+    "password": "123456",
+    "username": "robin"
+}
+
+### Sign in an existing user
+
+GET http://localhost:3000/auth/signin
+Content-Type: application/json
+
+{
+    "email": "robin.tamim@gmail.com",
     "password": "123456"
 }
-    
+
+### Sign out
+POST http://localhost:3000/auth/signout
+
+### Get logged in user settings
+GET http://localhost:3000/auth/settings
+

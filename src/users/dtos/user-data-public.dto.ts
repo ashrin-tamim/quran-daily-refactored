@@ -6,4 +6,7 @@ export class UserDataPublicDto {
 
   @Expose()
   email: string;
+
+  @Expose()
+  username: string;
 }
